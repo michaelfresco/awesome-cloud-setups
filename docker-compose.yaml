@@ -1,0 +1,16 @@
+services:
+  mkd:
+    build: .
+    container_name: mkdocs-insiders
+    volumes:
+      - .:/app  # Mount the current directory into the container
+    ports:
+      - "8000:8000"  # Expose the MkDocs site on port 8000
+    environment:
+      - MKDOCS_ENV=development
+    networks:
+      - mkd-network
+networks:
+  mkd-network:
+    driver: bridge
+

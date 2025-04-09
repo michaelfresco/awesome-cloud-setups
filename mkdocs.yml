@@ -1,0 +1,103 @@
+site_name: Awesome Cloud Setups
+docs_dir: docs
+site_dir: site
+nav:
+  - Overview: index.md
+  - Cloud Run with GH Actions: cloud-run-gh-actions.md
+  - GKE Autopilot: gke-autopilot.md
+theme:
+  name: material
+  custom_dir: assets # needed for logo svg ./assets/.icons/cloud.svg
+  favicon: img/favicon.ico
+  icon:
+    logo: cloud
+  palette:
+  - scheme: slate
+    media: '(prefers-color-scheme: dark)'
+    primary: blue
+    accent: purple
+    toggle:
+      icon: material/brightness-7
+      name: Switch to system preference
+  - scheme: default
+    media: '(prefers-color-scheme: light)'
+    primary: blue
+    accent: purple
+    toggle:
+      icon: material/brightness-4
+      name: Switch to dark mode
+  features:
+  # enables annotations or comments within code blocks
+  - content.code.annotate
+  # enables copy button on code sections
+  - content.code.copy
+  # enables tooltips for footnotes
+  - content.footnote.tooltips
+  # enables linking between tabs in documentation
+  - content.tabs.link
+  # enables tooltips for various content elements
+  - content.tooltips
+  # enables footer navigation links
+  - navigation.footer
+  # enables indexing of terms or concepts in the documentation
+  - navigation.indexes
+  # enables instant dynamic navigation (without page reloads)
+  - navigation.instant
+  # enables prefetching of content for instant navigation
+  - navigation.instant.prefetch
+  # enables progress indicator during instant navigation
+  - navigation.instant.progress
+  # displays the breadcrumb or navigation path
+  - navigation.path
+  # enables "back to top" button in the navigation
+  - navigation.top
+  # enables tracking user interactions with navigation
+  - navigation.tracking
+  # highlights search results within the page content
+  - search.highlight
+  # enables sharing of search results or pages
+  - search.share
+  # provides search suggestions as the user types
+  - search.suggest
+  # enables sticky Table of Contents that follows the user as they scroll
+  - toc.follow
+plugins:
+  search:
+repo_name: michaelfresco/awesome-cloud-setups
+repo_url: https://github.com/michaelfresco/awesome-cloud-setups
+markdown_extensions:
+  # provides abbreviations with a tooltip when hovering
+  abbr:
+  # allows attributes to be added to elements
+  attr_list:
+  # enables footnotes
+  footnotes:
+  # allows raw HTML in markdown
+  md_in_html:
+  # enables tables in markdown
+  tables:
+  # generates a table of contents with permalinks
+  toc:
+    permalink: true
+  # improves em dash and special character handling
+  pymdownx.betterem:
+    smart_enable: all
+  # enables caret notation (e.g., superscript)
+  pymdownx.caret:
+  # adds extended code block syntax highlighting
+  pymdownx.highlight:
+    line_spans: __span
+  # enables inline code highlighting
+  pymdownx.inlinehilite:
+  # provides keybinding support
+  pymdownx.keys:
+  # allows custom fenced code blocks (e.g., mermaid)
+  pymdownx.mark:
+  # allows custom fenced code blocks with specific formatting
+  pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: !!python/name:pymdownx.superfences.fence_code_format
+  # allows tilde-based syntax formatting
+  pymdownx.tilde:
